@@ -27,7 +27,7 @@ print("\n")
 for tag in all_anchor_tags:
     print(tag.get("href")) #prints just the links and not the text
 
-#Part 5: Search using attribute name
+#Part 5: Search using attribute name using HTML names
 heading = soup.find(name="h1", id="name") #has a name of h1 and an id of name
 print(heading)#<h1 id="name">Fatema Alam</h1>
 
@@ -38,6 +38,15 @@ print(section_heading.name) #h3
 print(section_heading.get("class")) #['heading']
 
 
-#Part 6: Narrowing down the find
+#Part 6: Narrowing down the find using CSS selectors
 company_url = soup.select_one(selector="p a")
 print(company_url) #<a href="https://www.northsouth.edu/">North South University</a>
+
+all_company_urls = soup.select(selector="p a")
+print(all_company_urls) #prints all urls that are inside an a and a p
+
+name = soup.select_one(selector="#name")
+print(name) #<h1 id="name">Fatema Alam</h1>
+
+headings = soup.select(".heading")
+print(headings) #[<h3 class="heading">Education</h3>, <h3 class="heading">Other Pages</h3>]
