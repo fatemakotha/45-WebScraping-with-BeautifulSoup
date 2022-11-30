@@ -23,3 +23,7 @@ print(movie_list) #prints list from 100 to 0
 movie_list.reverse()
 print(movie_list)
 
+with open("Top 100 movies list", 'w') as f:
+    for each_movie in movie_list:
+        f.write(each_movie)
+        f.write("\n")
