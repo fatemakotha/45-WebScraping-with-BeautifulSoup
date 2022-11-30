@@ -21,6 +21,7 @@ for each_item in titles:
 print(movie_list) #prints list from 100 to 0
 #Reversing the list starting from 1-100
 movie_list.reverse()
+# or : movies = movie_list[::-1]
 print(movie_list)
 
 with open("Top 100 movies list", 'w') as f:
