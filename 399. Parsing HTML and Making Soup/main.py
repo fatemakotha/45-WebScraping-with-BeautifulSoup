@@ -33,3 +33,6 @@ print(heading)#<h1 id="name">Fatema Alam</h1>
 
 section_heading = soup.find(name="h3", class_="heading")
 print(section_heading) #<h3 class="heading">Education</h3>
+print(section_heading.text) #Education
+print(section_heading.name) #h3
+print(section_heading.get("class")) #['heading']
