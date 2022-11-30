@@ -36,3 +36,8 @@ print(section_heading) #<h3 class="heading">Education</h3>
 print(section_heading.text) #Education
 print(section_heading.name) #h3
 print(section_heading.get("class")) #['heading']
+
+
+#Part 6: Narrowing down the find
+company_url = soup.select_one(selector="p a")
+print(company_url) #<a href="https://www.northsouth.edu/">North South University</a>
