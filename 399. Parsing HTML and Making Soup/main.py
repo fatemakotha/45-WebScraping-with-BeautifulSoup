@@ -48,5 +48,6 @@ print(all_company_urls) #prints all urls that are inside an a and a p
 name = soup.select_one(selector="#name")
 print(name) #<h1 id="name">Fatema Alam</h1>
 
+
 headings = soup.select(".heading")
 print(headings) #[<h3 class="heading">Education</h3>, <h3 class="heading">Other Pages</h3>]
